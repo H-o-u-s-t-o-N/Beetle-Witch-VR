@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Cauldron : MonoBehaviour
 {
+    public int maxIngredientsCount = 5;
     public IngredientManager ingredientManager;
     public RecipeDatabase recipeDatabase;
-    
+    public ParticleSystem particle;
+
     private List<Ingredient.Name> currentIngredients = new List<Ingredient.Name>();
 
     private void OnTriggerEnter(Collider other)
@@ -19,7 +21,7 @@ public class Cauldron : MonoBehaviour
             Destroy(other.gameObject);
             CheckIngredients();
 
-            ingredientManager.RespawnAllIngredients();
+            StartCoroutine(RespawnIngredientsAfterFrame());
         }
         else
         {
@@ -39,8 +41,14 @@ public class Cauldron : MonoBehaviour
             {
                 // CreateResultObject(recipe.resultObjectPrefab); for test
                 UnlockNewIngredients(recipe.resultObjectPrefab.GetComponent<Ingredient>().name);
+                currentIngredients.Clear();
                 return;
             }
+        }
+
+        if (currentIngredients.Count >= maxIngredientsCount)
+        {
+            currentIngredients.Clear();
         }
     }
 
@@ -51,15 +59,21 @@ public class Cauldron : MonoBehaviour
             return false;
         }
 
+        var tempIngredients = new List<Ingredient.Name>(currentIngredients);
+
         foreach (var ingredient in recipe.ingredients)
         {
-            if (!currentIngredients.Contains(ingredient))
+            if (tempIngredients.Contains(ingredient))
+            {
+                tempIngredients.Remove(ingredient);
+            }
+            else
             {
                 return false;
             }
         }
 
-        return true;
+        return tempIngredients.Count == 0;
     }
 
     private void CreateResultObject(GameObject resultObjectPrefab)
@@ -71,5 +85,40 @@ public class Cauldron : MonoBehaviour
     private void UnlockNewIngredients(Ingredient.Name newIngredient)
     {
         ingredientManager.UnlockIngredient(newIngredient);
+    }
+
+    private IEnumerator RespawnIngredientsAfterFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        ingredientManager.RespawnAllIngredients();
+    }
+
+    //--------- Prticle Effects
+    private void Update()
+    {
+        if (currentIngredients.Count > 0)
+        {
+            ActivateEffect();
+        }
+        else
+        {
+            DeactivateEffect();
+        }
+    }
+
+    private void ActivateEffect()
+    {
+        if (particle != null && !particle.isPlaying)
+        {
+            particle.Play();
+        }
+    }
+
+    private void DeactivateEffect()
+    {
+        if (particle != null && particle.isPlaying)
+        {
+            particle.Stop();
+        }
     }
 }

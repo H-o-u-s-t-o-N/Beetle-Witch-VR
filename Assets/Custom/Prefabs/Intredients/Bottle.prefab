@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1342048449719873509}
   - component: {fileID: 3181648454862126621}
   m_Layer: 0
-  m_Name: IngrBottle
+  m_Name: Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

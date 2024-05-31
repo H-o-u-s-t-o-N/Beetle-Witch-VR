@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RecipeDatabase
   m_EditorClassIdentifier: 
   recipes:
-  - ingredients: 00000000
+  - ingredients: 01000000
     resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
