@@ -15,3 +15,41 @@ MonoBehaviour:
   recipes:
   - ingredients: 01000000
     resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: Quest One for bottle
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: ' Drink?'
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 2
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: srytjrytj
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: srtjsartyj
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 2
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: rtjnarytj
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: 1325
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: yup1
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: aedh
