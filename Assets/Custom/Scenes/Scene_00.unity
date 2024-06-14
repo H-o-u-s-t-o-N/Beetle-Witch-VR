@@ -10166,7 +10166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4594345719042244924, guid: 54bb1e9ae1fc5194d9e9ccf24e717e30, type: 3}
       propertyPath: m_Name
-      value: Spatial Panel Manipulator Model
+      value: Quest Panel
       objectReference: {fileID: 0}
     - target: {fileID: 6465703103445207460, guid: 54bb1e9ae1fc5194d9e9ccf24e717e30, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

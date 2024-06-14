@@ -13,7 +13,6 @@ public class QuestManager : MonoBehaviour
     void Start()
     {
         GenerateQuests();
-        // StartNextQuest();
     }
 
     public void StartGame()
@@ -58,7 +57,6 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-    // Этот метод должен быть вызван когда текущий квест завершен
     public void OnQuestCompleted()
     {
         StartNextQuest();

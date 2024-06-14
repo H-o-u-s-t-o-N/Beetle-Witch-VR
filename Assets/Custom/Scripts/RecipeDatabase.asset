@@ -53,3 +53,8 @@ MonoBehaviour:
     category: 0
     image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
     questDescription: aedh
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: 17c263f6077f14b218b13656aacd9551, type: 3}
+    questDescription: nstrsaret5h

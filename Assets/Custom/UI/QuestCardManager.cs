@@ -31,7 +31,6 @@ public class QuestCardManager : MonoBehaviour
         GameObject newCard = Instantiate(cardPrefab, cardParent);
         newCard.name = "Card " + currentQuestIndex;
 
-        // Настройка UI элементов внутри карты
         Transform modalText = newCard.transform.Find("Modal Text");
         if (modalText != null)
         {
@@ -46,7 +45,6 @@ public class QuestCardManager : MonoBehaviour
         if (imageHolder != null)
         {
             Image imageComponent = imageHolder.GetComponent<Image>();
-            // if (imageComponent != null && recipe.image != null)
             if (imageComponent != null)
             {
                 imageComponent.sprite = recipe.image;
