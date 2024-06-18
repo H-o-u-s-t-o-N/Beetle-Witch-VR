@@ -6,16 +6,13 @@ public class Ingredient : MonoBehaviour
 
     public enum Name
     {
-        Herb,
-        Mushroom,
-        Crystal,
-        Feather,
-        EyeOfNewt,
-        SpiderLeg,
-        DragonScale,
-        UnicornHorn,
-        BatWing,
-        ToadStool
+        Potion,
+        Apple,
+        Cake,
+        Tomato,
+        Cupcake,
+        Donut,
+        Broccoli
         // todo
     }
 }

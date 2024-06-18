@@ -22,13 +22,15 @@ public class QuestManager : MonoBehaviour
 
     void GenerateQuests()
     {
-        List<Recipe> firstRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.First);
-        List<Recipe> secondRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Second);
-        List<Recipe> finalRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Final);
+        //<Recipe> firstRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.First);
+        //List<Recipe> secondRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Second);
+        //List<Recipe> finalRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Final);
+        List<Recipe> tradingRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Trading);
 
-        AddRandomRecipesToQueue(firstRecipes, 3);
-        AddRandomRecipesToQueue(secondRecipes, 3);
-        AddRandomRecipesToQueue(finalRecipes, 1);
+        //AddRandomRecipesToQueue(firstRecipes, 3);
+        //AddRandomRecipesToQueue(secondRecipes, 3);
+        //AddRandomRecipesToQueue(finalRecipes, 1);
+        AddRandomRecipesToQueue(tradingRecipes, 1);
     }
 
     void AddRandomRecipesToQueue(List<Recipe> recipes, int count)
