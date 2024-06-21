@@ -16,7 +16,9 @@ public class Recipe
     {
         First,
         Second,
-        Final
+        Final,
+        Trading,
+        Start
     }
 
 }

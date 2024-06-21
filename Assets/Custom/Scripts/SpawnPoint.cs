@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     public Ingredient.Name ingredientName;
-    public bool isUnlocked = false;
+    public bool isUnlocked;
     public RecipeDatabase recipeDatabase;
 
     private GameObject currentIngredient;
