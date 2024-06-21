@@ -58,3 +58,33 @@ MonoBehaviour:
     category: 0
     image: {fileID: 21300000, guid: 17c263f6077f14b218b13656aacd9551, type: 3}
     questDescription: nstrsaret5h
+  - ingredients: 02000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: d4ac4b4f137399d4b90bd804428ee1d1, type: 3}
+    category: 3
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: CakeTomatoTrade
+  - ingredients: 05000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 442d150a82a4b2a4dba68a5d06de3bb0, type: 3}
+    category: 3
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: DonutBroccoliTrade
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+    category: 3
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: CupcakeAppleTrade
+  - ingredients: 
+    resultObjectPrefab: {fileID: 374151818356740834, guid: daa7924141b858c4183c2bb81977921b, type: 3}
+    category: 4
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: CupcakeStart
+  - ingredients: 
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 3d3bb089a25978543993cbb10e5977ef, type: 3}
+    category: 4
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: CakeStart
+  - ingredients: 
+    resultObjectPrefab: {fileID: 374151818356740834, guid: c592de8d711eb394da7321006e501f9a, type: 3}
+    category: 4
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: DonutStart
