@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2950634b692b97f45aa3e8a0410e664a, type: 3}
+  m_Name: RecipeDatabase
+  m_EditorClassIdentifier: 
+  recipes:
+  - ingredients: 01000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: Quest One for bottle
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: ' Drink?'
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 2
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: srytjrytj
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: srtjsartyj
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 2
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: rtjnarytj
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: 1325
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: yup1
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
+    questDescription: aedh
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: 17c263f6077f14b218b13656aacd9551, type: 3}
+    questDescription: nstrsaret5h
+  - ingredients: 02000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: d4ac4b4f137399d4b90bd804428ee1d1, type: 3}
+    category: 3
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: CakeTomatoTrade
+  - ingredients: 05000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 442d150a82a4b2a4dba68a5d06de3bb0, type: 3}
+    category: 3
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: DonutBroccoliTrade
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+    category: 3
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: CupcakeAppleTrade
+  - ingredients: 
+    resultObjectPrefab: {fileID: 374151818356740834, guid: daa7924141b858c4183c2bb81977921b, type: 3}
+    category: 4
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: CupcakeStart
+  - ingredients: 
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 3d3bb089a25978543993cbb10e5977ef, type: 3}
+    category: 4
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: CakeStart
+  - ingredients: 
+    resultObjectPrefab: {fileID: 374151818356740834, guid: c592de8d711eb394da7321006e501f9a, type: 3}
+    category: 4
+    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
+    questDescription: DonutStart
