@@ -5,15 +5,26 @@ using UnityEngine;
 public class Cauldron : MonoBehaviour
 {
     public int maxIngredientsCount = 5;
-    public IngredientManager ingredientManager;
     public RecipeDatabase recipeDatabase;
     public ParticleSystem particle;
+    public GameObjectSpawnPoint drinkSpawnPoint;
 
+    private IngredientManager ingredientManager;
     private List<Ingredient.Name> currentIngredients = new List<Ingredient.Name>();
+
+    void Start()
+    {
+        ingredientManager = FindObjectOfType<IngredientManager>();
+
+        if (ingredientManager == null)
+        {
+            Debug.LogError("IngredientManager not found on the scene");
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        Ingredient ingredient = other.GetComponent<Ingredient>();
+        var ingredient = other.GetComponent<Ingredient>();
         if (ingredient != null)
         {
             currentIngredients.Add(ingredient.name);
@@ -21,7 +32,7 @@ public class Cauldron : MonoBehaviour
             Destroy(other.gameObject);
             CheckIngredients();
 
-            StartCoroutine(RespawnIngredientsAfterFrame());
+            StartCoroutine(RespawnIngredientsAfterFrame(ingredient.name));
         }
         else
         {
@@ -39,8 +50,7 @@ public class Cauldron : MonoBehaviour
         {
             if (IsRecipeCorrect(recipe))
             {
-                // CreateResultObject(recipe.resultObjectPrefab); for test
-                UnlockNewIngredients(recipe.resultObjectPrefab.GetComponent<Ingredient>().name);
+                drinkSpawnPoint.SpawnIngredient(recipe.resultObjectPrefab);
                 currentIngredients.Clear();
                 return;
             }
@@ -76,21 +86,21 @@ public class Cauldron : MonoBehaviour
         return tempIngredients.Count == 0;
     }
 
-    private void CreateResultObject(GameObject resultObjectPrefab)
-    {
-        Instantiate(resultObjectPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
-        currentIngredients.Clear();
-    }
+    // private void CreateResultObject(GameObject resultObjectPrefab)
+    // {
+    //     Instantiate(resultObjectPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
+    //     currentIngredients.Clear();
+    // }
 
-    private void UnlockNewIngredients(Ingredient.Name newIngredient)
-    {
-        ingredientManager.UnlockIngredient(newIngredient);
-    }
+    // private void UnlockNewIngredients(Ingredient.Name newIngredient)
+    // {
+    //     ingredientManager.UnlockIngredient(newIngredient);
+    // }
 
-    private IEnumerator RespawnIngredientsAfterFrame()
+    private IEnumerator RespawnIngredientsAfterFrame(Ingredient.Name name)
     {
         yield return new WaitForEndOfFrame();
-        ingredientManager.RespawnAllIngredients();
+        ingredientManager.RespawnIngredient(name);
     }
 
     //--------- Prticle Effects

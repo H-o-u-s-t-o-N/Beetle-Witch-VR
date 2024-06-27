@@ -81,7 +81,7 @@ public class GhostTrading : MonoBehaviour
         else return false;
     }
 
-    IEnumerator showInfo(GameObject info)
+    private IEnumerator showInfo(GameObject info)
     {
         info.SetActive(true);
         yield return new WaitForSeconds(2);

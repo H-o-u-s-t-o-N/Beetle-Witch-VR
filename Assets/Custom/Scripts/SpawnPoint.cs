@@ -5,27 +5,46 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     public Ingredient.Name ingredientName;
-    public bool isUnlocked;
-    public RecipeDatabase recipeDatabase;
+    public Ingredient prefab;
 
-    private GameObject currentIngredient;
+    // private bool isUnlocked;
+    private Ingredient currentIngredient;
 
-    private void Start()
+    // private void Start()
+    // {
+    //     if (isUnlocked)
+    //     {
+    //         SpawnIngredient();
+    //     }
+    // }
+    public void Lock()
     {
-        if (isUnlocked)
-        {
-            SpawnIngredient();
-        }
+        DestroyIngredient();
+    }
+
+    public void Unlock()
+    {
+        DestroyIngredient();
+        SpawnIngredient();
     }
 
     public void SpawnIngredient()
     {
         if (currentIngredient == null)
         {
-            GameObject ingredientPrefab = GetIngredientPrefab(ingredientName);
-            if (ingredientPrefab != null)
+            if (prefab != null)
             {
-                currentIngredient = Instantiate(ingredientPrefab, transform.position, transform.rotation);
+                var spawned = Instantiate(prefab, transform.position, transform.rotation);
+                var rb = spawned.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    rb.AddForce(transform.up * 1.5f, ForceMode.Impulse);
+                }
+                this.currentIngredient = spawned;
+            }
+            else
+            {
+                Debug.Log("Spawn point is invalid: Missing Ingredient prefab");
             }
         }
     }
@@ -39,15 +58,15 @@ public class SpawnPoint : MonoBehaviour
         }
     }
 
-    private GameObject GetIngredientPrefab(Ingredient.Name ingredientName)
-    {
-        foreach (var recipe in recipeDatabase.recipes)
-        {
-            if (recipe.resultObjectPrefab.GetComponent<Ingredient>().name == ingredientName)
-            {
-                return recipe.resultObjectPrefab;
-            }
-        }
-        return null;
-    }
+    // private GameObject GetIngredientPrefab(Ingredient.Name ingredientName)
+    // {
+    //     foreach (var recipe in recipeDatabase.recipes)
+    //     {
+    //         if (recipe.resultObjectPrefab.GetComponent<Ingredient>().name == ingredientName)
+    //         {
+    //             return recipe.resultObjectPrefab;
+    //         }
+    //     }
+    //     return null;
+    // }
 }
