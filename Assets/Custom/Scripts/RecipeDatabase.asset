@@ -14,77 +14,191 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipes:
   - ingredients: 01000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: fa48dba7e3a991d40a8afae13e9e8716, type: 3}
+    category: 4
+    image: {fileID: 21300000, guid: a2b4b5e390113dd4e9563541880c389a, type: 3}
+    questDescription: "Hey! Welcome to the Dungeon Pub for Restless Spirits! Good
+      news - you\u2019re not dead. Yet. Bad news is that helping you get out of here
+      will be awfully inconvenient\u2026 for me. So, to make it worth my time, you\u2019ll
+      work a shift at the cauldron as an\u2026 intern! Yes, an intern.  Now, before
+      the guests arrive, show me you can actually move those hands of yours, put
+      an APPLE in the cauldron."
+  - ingredients: 010000000700000009000000
     resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
     category: 0
-    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
-    questDescription: Quest One for bottle
-  - ingredients: 04000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
-    category: 1
-    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
-    questDescription: ' Drink?'
-  - ingredients: 04000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
-    category: 2
-    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
-    questDescription: srytjrytj
-  - ingredients: 04000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
-    category: 1
-    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
-    questDescription: srtjsartyj
-  - ingredients: 04000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
-    category: 2
-    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
-    questDescription: rtjnarytj
-  - ingredients: 04000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
-    category: 1
-    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
-    questDescription: 1325
-  - ingredients: 04000000
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Potion coming up! Give it an APPLE, a PUMPKIN, and a bit of
+      GARLIC, pronto!
+  - ingredients: 030000000800000003000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 2862f7c3345947746b0ea6429b9a4cb8, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Vegetable one! It's TOMATO, PEPPER, and... another TOMATO.
+      Client is king, move it!
+  - ingredients: 010000000800000006000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: fa48dba7e3a991d40a8afae13e9e8716, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Stay alive, intern! This one is an APPLE, a PEPPER, and some
+      BROCCOLI!
+  - ingredients: 0a0000000900000003000000
     resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
     category: 0
-    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
-    questDescription: yup1
-  - ingredients: 04000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: New order, keep up! Throw in a MUSHROOM, a TOMATO, and some
+      GARLIC!
+  - ingredients: 010000000900000005000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 2862f7c3345947746b0ea6429b9a4cb8, type: 3}
     category: 0
-    image: {fileID: 21300000, guid: bd657264cd2bd754bbed1cc8905fbdce, type: 3}
-    questDescription: aedh
-  - ingredients: 04000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Restless spirits, endless thirst! Give it a PUMPKIN, an APPLE,
+      and... a DONUT? Sure, whatever.
+  - ingredients: 070000000700000007000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: fa48dba7e3a991d40a8afae13e9e8716, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: When you're dead it's all Autumn all the time! So throw in
+      PUMPKIN, PUMPKIN, and another PUMPKIN for flavour!
+  - ingredients: 040000000400000002000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 2862f7c3345947746b0ea6429b9a4cb8, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: We've got a sweettooth with no teeth! It's two CUPCAKES and
+      a piece of CAKE!
+  - ingredients: 050000000800000009000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: fa48dba7e3a991d40a8afae13e9e8716, type: 3}
     category: 0
     image: {fileID: 21300000, guid: 17c263f6077f14b218b13656aacd9551, type: 3}
-    questDescription: nstrsaret5h
-  - ingredients: 02000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: d4ac4b4f137399d4b90bd804428ee1d1, type: 3}
-    category: 3
-    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
-    questDescription: CakeTomatoTrade
-  - ingredients: 05000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 442d150a82a4b2a4dba68a5d06de3bb0, type: 3}
-    category: 3
-    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
-    questDescription: DonutBroccoliTrade
-  - ingredients: 04000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
-    category: 3
-    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
-    questDescription: CupcakeAppleTrade
-  - ingredients: 
-    resultObjectPrefab: {fileID: 374151818356740834, guid: daa7924141b858c4183c2bb81977921b, type: 3}
-    category: 4
-    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
-    questDescription: CupcakeStart
-  - ingredients: 
+    questDescription: Sweet and weird! A PEPPER, some GARLIC, and a big old DONUT!
+      Now!!!
+  - ingredients: 0a0000000700000001000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Is blood still moving in your veins? Then get going! A MUSHROOM,
+      a PUMPKIN, and an APPLE!
+  - ingredients: 090000000200000004000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 2862f7c3345947746b0ea6429b9a4cb8, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Spirits can't account for taste - so when they say 'make it
+      GARLIC, CAKE, and CUPCAKE' you just do it!
+  - ingredients: 070000000600000008000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: fa48dba7e3a991d40a8afae13e9e8716, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Stay awake, keep those hands of yours moving! A PUMPKIN, a
+      PEPPER, and some BROCCOLI - and make it snappy!
+  - ingredients: 020000000700000007000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 2862f7c3345947746b0ea6429b9a4cb8, type: 3}
+    category: 0
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Not sure how we'd drink it? Don't think then, work! CAKE and
+      double PUMPKIN!
+  - ingredients: 10000000100000000600000006000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 4d8bcebf91921f0429dd05940a5715d1, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Green Special! Two BROCCOLIS and two GREEN GEMS!
+  - ingredients: 010000000d0000000700000011000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: b95fb9c66ec14554daaef8a2059c0570, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: One Firewalk! That's an APPLE and a RED GEM, a PUMPKIN and
+      an ORANGE GEM!
+  - ingredients: 0c000000050000000f0000000f000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Star-glazed Diamond! Put in a DONUT and, you'll never guess,
+      a STAR GEM and two DIAMONDS!
+  - ingredients: 090000000f000000060000000e000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 2862f7c3345947746b0ea6429b9a4cb8, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Sparkling Medicine! A DIAMOND, some GARLIC and BROCCOLI, then
+      a HEART GEM so it hits where it should!
+  - ingredients: 0b000000100000000700000010000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 4d8bcebf91921f0429dd05940a5715d1, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Hard One with PUMPKIN! Aside from that add two GREEN GEMS and
+      a PURPLE one!
+  - ingredients: 11000000110000000100000011000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: b95fb9c66ec14554daaef8a2059c0570, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Juicy order (from a quiet client) - make it an ORANGE GEM...
+      an ORANGE GEM... an APPLE!... And another ORANGE GEM.
+  - ingredients: 0100000010000000030000000d000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: fa48dba7e3a991d40a8afae13e9e8716, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Red Light, Green Light! Throw in an APPLE, a TOMATO, a GREEN
+      GEM and a RED GEM!
+  - ingredients: 080000000f0000000d00000011000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 7ce4913421de57c4ab13e1776e266807, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Red Glint! It goes - RED GEM, DIAMOND, a PEPPER (for some bloody
+      reason), and an ORANGE GEM!
+  - ingredients: 0e0000000b0000000a0000000a000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 2862f7c3345947746b0ea6429b9a4cb8, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Fungal Heart! It's a PURPLE GEM and... guess the rest. Just
+      kidding - a HEART GEM and double PURPLE GEM (could've guessed it though).
+  - ingredients: 10000000100000001000000006000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 4d8bcebf91921f0429dd05940a5715d1, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Emerald Breath! Triple GREEN GEMS and some BROCCOLI!
+  - ingredients: 01000000040000000f0000000c000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: b95fb9c66ec14554daaef8a2059c0570, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Sprinkles Eternal! A CUPCAKE with an APPLE, a DIAMOND and a
+      STAR GEM on top!
+  - ingredients: 0e0000000e0000000d0000000c000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: fa48dba7e3a991d40a8afae13e9e8716, type: 3}
+    category: 1
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Travellers Hearts! So double HEART GEM, plus RED and STAR GEMS!
+  - ingredients: 12000000010000000e0000000a0000000c000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 447f25206d6883440aae0779b7e36a20, type: 3}
+    category: 2
+    image: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
+    questDescription: Alright intern, your final potion tonight and then I'll help
+      you get out. It's Host's Special - you see, a witch used to live her and she
+      liked beetles. A lot. So, make it one STAR and one HEART GEMS, an APPLE, a
+      MUSHROOM, and one BEETLE. Good luck!
+  - ingredients: 01000000
     resultObjectPrefab: {fileID: 374151818356740834, guid: 3d3bb089a25978543993cbb10e5977ef, type: 3}
-    category: 4
-    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
-    questDescription: CakeStart
-  - ingredients: 
+    category: 3
+    image: {fileID: 0}
+    questDescription: 
+  - ingredients: 07000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: daa7924141b858c4183c2bb81977921b, type: 3}
+    category: 3
+    image: {fileID: 0}
+    questDescription: 
+  - ingredients: 0a000000
     resultObjectPrefab: {fileID: 374151818356740834, guid: c592de8d711eb394da7321006e501f9a, type: 3}
-    category: 4
-    image: {fileID: 21300000, guid: a6721511441c05a43964dac58584c890, type: 3}
-    questDescription: DonutStart
+    category: 3
+    image: {fileID: 0}
+    questDescription: 
+  - ingredients: 02000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 6043a6011cb08304cbee54118ef87377, type: 3}
+    category: 3
+    image: {fileID: 0}
+    questDescription: 
+  - ingredients: 04000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: de6ace829a3515b4286fbed2c8d9196b, type: 3}
+    category: 3
+    image: {fileID: 0}
+    questDescription: 
+  - ingredients: 05000000
+    resultObjectPrefab: {fileID: 374151818356740834, guid: d7522b699488c5b4db70e0bae144042e, type: 3}
+    category: 3
+    image: {fileID: 0}
+    questDescription: 

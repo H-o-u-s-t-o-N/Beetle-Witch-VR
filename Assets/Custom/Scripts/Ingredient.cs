@@ -12,7 +12,19 @@ public class Ingredient : MonoBehaviour
         Tomato,
         Cupcake,
         Donut,
-        Broccoli
+        Broccoli,
+        Pumpkin,
+        Pepper,
+        Garlic,
+        Mushroom,
+        Purple,
+        Star,
+        Red,
+        Heart,
+        Diamond,
+        Green,
+        Orange,
+        Beetle,
         // todo
     }
 }
