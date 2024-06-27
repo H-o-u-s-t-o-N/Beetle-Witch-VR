@@ -9,7 +9,6 @@ public class QuestCardManager : MonoBehaviour
 {
     public GameObject cardPrefab;
     public Transform cardParent;
-    public GameObject startButton;
     public StepManager stepManager;
 
     private int currentQuestIndex = 0;
@@ -20,9 +19,11 @@ public class QuestCardManager : MonoBehaviour
         CreateQuestCard(recipe);
         stepManager.Next();
 
-        if (startButton != null)
+        // Card Start
+        GameObject startCard = GameObject.Find("Card Start");
+        if (startCard != null)
         {
-            Destroy(startButton);
+            Destroy(startCard);
         }
     }
 

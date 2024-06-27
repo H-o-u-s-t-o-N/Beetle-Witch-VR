@@ -9,6 +9,7 @@ public class QuestManager : MonoBehaviour
 
     private Queue<Recipe> questQueue = new Queue<Recipe>();
     private int currentQuestIndex = 0;
+    private Recipe currentQuestRecipe;
 
     void Start()
     {
@@ -23,14 +24,15 @@ public class QuestManager : MonoBehaviour
     void GenerateQuests()
     {
         // TODO uncomment
-        List<Recipe> firstRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.First);
-        List<Recipe> secondRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Second);
-        List<Recipe> finalRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Final);
+        // List<Recipe> firstRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.First);
+        // List<Recipe> secondRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Second);
+        // List<Recipe> finalRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Final);
         // List<Recipe> tradingRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Trading);
+        List<Recipe> testRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Test);
 
-        AddRandomRecipesToQueue(firstRecipes, 3);
-        AddRandomRecipesToQueue(secondRecipes, 3);
-        AddRandomRecipesToQueue(finalRecipes, 1);
+        // AddRandomRecipesToQueue(firstRecipes, 3);
+        // AddRandomRecipesToQueue(secondRecipes, 3);
+        AddRandomRecipesToQueue(testRecipes, 1);
         // AddRandomRecipesToQueue(tradingRecipes, 1);
     }
 
@@ -48,21 +50,25 @@ public class QuestManager : MonoBehaviour
     {
         if (questQueue.Count > 0)
         {
-            Recipe currentQuest = questQueue.Dequeue();
+            this.currentQuestRecipe = questQueue.Dequeue();
 
-            questCardManager.CreateActiveQuestCard(currentQuest);
+            questCardManager.CreateActiveQuestCard(currentQuestRecipe);
             currentQuestIndex++;
         }
         else
         {
             Debug.Log("End game");
-
         }
     }
 
     public void OnQuestCompleted()
     {
         StartNextQuest();
+    }
+
+    public Drink GetExpectedDrink()
+    {
+        return this.currentQuestRecipe.GetDrink();
     }
 
 }

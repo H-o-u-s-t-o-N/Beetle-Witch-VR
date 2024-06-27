@@ -18,7 +18,19 @@ public class Recipe
         Second,
         Final,
         Trading,
-        Start
+        Start,
+        Test // todo remove before commit
+    }
+
+    public Drink GetDrink()
+    {
+        Drink drink = resultObjectPrefab.GetComponent<Drink>();
+        
+        if(drink == null) {
+            Debug.Log("resultObjectPrefab is invalid and don't has 'Drink' Script.");
+        }
+        
+        return drink;
     }
 
 }
