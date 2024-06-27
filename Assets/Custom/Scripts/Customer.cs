@@ -5,7 +5,6 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     public QuestManager questManager;
-    public InfoCardController infoCardController;
     private GameObject noInfo;
     private GameObject yesInfo;
 
