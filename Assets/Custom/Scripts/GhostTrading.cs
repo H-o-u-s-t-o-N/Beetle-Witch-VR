@@ -15,7 +15,8 @@ public class GhostTrading : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Ingredient ingredient = other.GetComponent<Ingredient>();
-        if (ingredient != null)
+        Drink drink = other.GetComponent<Drink>();
+        if (drink != null)
         {
             currentIngredient = ingredient.name;
 

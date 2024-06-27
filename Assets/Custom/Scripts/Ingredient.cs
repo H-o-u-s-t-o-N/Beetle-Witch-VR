@@ -24,7 +24,16 @@ public class Ingredient : MonoBehaviour
         Diamond,
         Green,
         Orange,
+
+        // ---- bugs
         Beetle,
-        // todo
+        Ladybug,
+        Wasp,
+        Ant,
+        Cockroach,
+        Grasshopper,
+        Butterfly,
+        Caterpiller,
+        Centipede
     }
 }
