@@ -26,7 +26,6 @@ public class Customer : MonoBehaviour
             if (expectedDrink.name == drink.name)
             {
                 questManager.OnQuestCompleted();
-                // Destroy(other.gameObject);
                 StartCoroutine(showInfo(yesInfo));
             }
             else
@@ -37,11 +36,6 @@ public class Customer : MonoBehaviour
         else
         {
             StartCoroutine(showInfo(noInfo));
-            // Rigidbody rb = other.GetComponent<Rigidbody>();
-            // if (rb != null)
-            // {
-            //     rb.AddForce(-other.transform.forward * 2, ForceMode.Impulse);
-            // }
         }
 
         Destroy(other.gameObject);

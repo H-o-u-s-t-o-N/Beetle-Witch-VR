@@ -6,7 +6,7 @@ using UnityEngine;
 public class GhostTrading : MonoBehaviour
 {
     public RecipeDatabase recipeDatabase;
-    public TradeSpawnPoint spawnPoint;
+    private GameObjectSpawnPoint spawnPoint;
 
     private List<Recipe> tradingList;
     private GameObject noInfo;
@@ -18,6 +18,13 @@ public class GhostTrading : MonoBehaviour
         this.tradingList = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Trading);
         this.noInfo = transform.Find("NoInfoCard").gameObject;
         this.yesInfo = transform.Find("YesInfoCard").gameObject;
+
+        this.spawnPoint = transform.GetComponentsInChildren<GameObjectSpawnPoint>()[0];
+
+        if (spawnPoint == null)
+        {
+            Debug.Log("GhostTrading Initial Error. Missing GameObjectSpawnPoint.");
+        }
 
         noInfo.SetActive(false);
         yesInfo.SetActive(false);

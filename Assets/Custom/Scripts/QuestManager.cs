@@ -6,6 +6,7 @@ public class QuestManager : MonoBehaviour
 {
     public RecipeDatabase recipeDatabase;
     public QuestCardManager questCardManager;
+    public GameObjectSpawnPoint spawnPoint;
 
     private Queue<Recipe> questQueue = new Queue<Recipe>();
     private int currentQuestIndex = 0;
@@ -24,14 +25,14 @@ public class QuestManager : MonoBehaviour
     void GenerateQuests()
     {
         // TODO uncomment
-        // List<Recipe> firstRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.First);
-        // List<Recipe> secondRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Second);
+        List<Recipe> firstRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.First);
+        List<Recipe> secondRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Second);
         // List<Recipe> finalRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Final);
         // List<Recipe> tradingRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Trading);
         // List<Recipe> testRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Test);
 
-        // AddRandomRecipesToQueue(firstRecipes, 3);
-        // AddRandomRecipesToQueue(secondRecipes, 3);
+        AddRandomRecipesToQueue(firstRecipes, 3);
+        AddRandomRecipesToQueue(secondRecipes, 3);
         // AddRandomRecipesToQueue(testRecipes, 1);
         // AddRandomRecipesToQueue(tradingRecipes, 1);
     }
@@ -63,12 +64,18 @@ public class QuestManager : MonoBehaviour
 
     public void OnQuestCompleted()
     {
+        SpawnDrink();
         StartNextQuest();
     }
 
     public Drink GetExpectedDrink()
     {
         return this.currentQuestRecipe.GetDrink();
+    }
+
+    public void SpawnDrink()
+    {
+        spawnPoint.SpawnIngredient(currentQuestRecipe.resultObjectPrefab);
     }
 
 }

@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipeDatabase: {fileID: 11400000, guid: 91af5e227fdc0744da70f0d254e3070c, type: 2}
-  spawnPoint: {fileID: 7555882038047273876}
+  spawnPoint: {fileID: 0}
 --- !u!136 &3408309228408648716
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1167,8 +1167,7 @@ PrefabInstance:
       propertyPath: ingredientName
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7554984931138850710, guid: c0fca68d6ab67464588761a5a9766bd7, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1180,7 +1179,7 @@ PrefabInstance:
       addedObject: {fileID: 6196164248288297077}
     - targetCorrespondingSourceObject: {fileID: 1997241416793385018, guid: c0fca68d6ab67464588761a5a9766bd7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7555882038047273876}
+      addedObject: {fileID: 265732377992594892}
   m_SourcePrefab: {fileID: 100100000, guid: c0fca68d6ab67464588761a5a9766bd7, type: 3}
 --- !u!4 &5264472513235799189 stripped
 Transform:
@@ -1222,7 +1221,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5894363749523588358, guid: ee52ceccec10ae646a2fb8ff368687f6, type: 3}
---- !u!114 &7555882038047273876
+--- !u!114 &265732377992594892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1231,6 +1230,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7799847018740863815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 042f1bbe840891d46987d538c54935ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c405eac6a2a03a4b9a139dd4db18c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
