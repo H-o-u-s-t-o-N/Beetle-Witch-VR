@@ -5,88 +5,80 @@ using UnityEngine;
 
 public class GhostTrading : MonoBehaviour
 {
-    public int maxIngredientsCount = 1;
-    public IngredientManager ingredientManager;
     public RecipeDatabase recipeDatabase;
+    public TradeSpawnPoint spawnPoint;
 
-// TODO remove initialization
-    private Ingredient.Name currentIngredient = new Ingredient.Name();
+    private List<Recipe> tradingList;
+    private GameObject noInfo;
+    private GameObject yesInfo;
+
+
+    void Start()
+    {
+        this.tradingList = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Trading);
+        this.noInfo = transform.Find("NoInfoCard").gameObject;
+        this.yesInfo = transform.Find("YesInfoCard").gameObject;
+
+        noInfo.SetActive(false);
+        yesInfo.SetActive(false);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         Ingredient ingredient = other.GetComponent<Ingredient>();
-        Drink drink = other.GetComponent<Drink>();
-        if (drink != null)
+        if (ingredient != null)
         {
-            currentIngredient = ingredient.name;
-
-            switch (currentIngredient.ToString())
+            if (CheckTrade(ingredient))
             {
-                case "Cake":
-                case "Cupcake":
-                case "Donut":
-                    Destroy(other.gameObject);
-                    CheckTrade();
-                    StartCoroutine(RespawnIngredientsAfterFrame());
-                    break;
-                default:
-                    break;
+                StartCoroutine(showInfo(yesInfo));
+            }
+            else
+            {
+                StartCoroutine(showInfo(noInfo));
             }
         }
         else
         {
-            Rigidbody rb = other.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.AddForce(-other.transform.forward * 1, ForceMode.Impulse);
-            }
+            StartCoroutine(showInfo(noInfo));
         }
+
+        Destroy(other.gameObject);
     }
 
-    private IEnumerator RespawnIngredientsAfterFrame()
+    private bool CheckTrade(Ingredient ingredient)
     {
-        yield return new WaitForEndOfFrame();
-        ingredientManager.RespawnAllIngredients();
-    }
-
-    private void CheckTrade()
-    {
-        foreach (var recipe in recipeDatabase.recipes)
+        foreach (var recipe in tradingList)
         {
-            if (IsTradeCorrect(recipe))
+            if (IsTradeCorrect(recipe, ingredient))
             {
-                SpawnNewIngredient(recipe.resultObjectPrefab.GetComponent<Ingredient>().name);
-                return;
+                spawnPoint.SpawnIngredient(recipe.resultObjectPrefab);
+                return true;
             }
         }
+        return false;
     }
 
-    private bool IsTradeCorrect(Recipe recipe)
+    private bool IsTradeCorrect(Recipe recipe, Ingredient ingredient)
     {
         if (recipe.ingredients.Count != 1)
         {
             return false;
         }
 
-        Ingredient.Name tempIngredients = currentIngredient;
+        Ingredient.Name fromRecipe = recipe.ingredients[0];
 
-        foreach (var ingredient in recipe.ingredients)
+        if (fromRecipe == ingredient.name)
         {
-            if (tempIngredients == ingredient)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return true;
         }
-        return false;
+        else return false;
     }
 
-    private void SpawnNewIngredient(Ingredient.Name newIngredient)
+    IEnumerator showInfo(GameObject info)
     {
-        ingredientManager.UnlockIngredient(newIngredient);
+        info.SetActive(true);
+        yield return new WaitForSeconds(2);
+        info.SetActive(false);
     }
 
 }

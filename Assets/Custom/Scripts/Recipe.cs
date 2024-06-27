@@ -18,8 +18,7 @@ public class Recipe
         Second,
         Final,
         Trading,
-        Start,
-        Test // todo remove before commit
+        Start
     }
 
     public Drink GetDrink()
@@ -29,7 +28,7 @@ public class Recipe
         if(drink == null) {
             Debug.Log("resultObjectPrefab is invalid and don't has 'Drink' Script.");
         }
-        
+
         return drink;
     }
 
