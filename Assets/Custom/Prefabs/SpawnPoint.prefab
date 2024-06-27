@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4505312866703833064}
   - component: {fileID: 3637294725762351932}
-  - component: {fileID: 7554984931138850710}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -75,18 +74,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7554984931138850710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997241416793385018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e04f124e7ae5d846ad7b5f12345ec37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ingredientName: 0
-  isUnlocked: 0
-  recipeDatabase: {fileID: 11400000, guid: 91af5e227fdc0744da70f0d254e3070c, type: 2}
