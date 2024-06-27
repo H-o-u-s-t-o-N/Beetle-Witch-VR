@@ -202,13 +202,3 @@ MonoBehaviour:
     category: 3
     image: {fileID: 0}
     questDescription: 
-  - ingredients: 05000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 435d8d307ce95d74f80b176381e4db3c, type: 3}
-    category: 5
-    image: {fileID: 0}
-    questDescription: quest 1
-  - ingredients: 05000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: 435d8d307ce95d74f80b176381e4db3c, type: 3}
-    category: 5
-    image: {fileID: 0}
-    questDescription: quest 2
