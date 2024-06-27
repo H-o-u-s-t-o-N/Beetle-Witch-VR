@@ -28,11 +28,11 @@ public class QuestManager : MonoBehaviour
         // List<Recipe> secondRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Second);
         // List<Recipe> finalRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Final);
         // List<Recipe> tradingRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Trading);
-        List<Recipe> testRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Test);
+        // List<Recipe> testRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Test);
 
         // AddRandomRecipesToQueue(firstRecipes, 3);
         // AddRandomRecipesToQueue(secondRecipes, 3);
-        AddRandomRecipesToQueue(testRecipes, 1);
+        // AddRandomRecipesToQueue(testRecipes, 1);
         // AddRandomRecipesToQueue(tradingRecipes, 1);
     }
 
