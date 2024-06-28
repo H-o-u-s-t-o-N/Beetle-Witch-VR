@@ -17,12 +17,13 @@ MonoBehaviour:
     resultObjectPrefab: {fileID: 374151818356740834, guid: dd333e9f4fcd29d40851dd1094ce73ab, type: 3}
     category: 4
     image: {fileID: 21300000, guid: 73f79f5e4835e994ebbf0f47352acc89, type: 3}
-    questDescription: "Hey! Welcome to the Dungeon Pub for Restless Spirits! Good
-      news - you\u2019re not dead. Yet. Bad news is that helping you get out of here
-      will be awfully inconvenient\u2026 for me. So, to make it worth my time, you\u2019ll
-      work a shift at the cauldron as an\u2026 intern! Yes, an intern.  Now, before
-      the guests arrive, show me you can actually move those hands of yours, put
-      an APPLE in the cauldron."
+    questDescription: "Hey! Welcome to the 'Beetle Witch' pub for Restless Spirits!
+      I'm the manager here, in charge for as long as the owner - you know, the Witch
+      - is out. Good news, you\u2019re not dead. Yet. Bad news is that helping you
+      get out of here will be awfully inconvenient\u2026 for me. So, to make it worth
+      my time, you\u2019ll work a shift at the cauldron as an\u2026 intern! Yes,
+      an intern.  Now, before the guests arrive, show me you can actually move those
+      hands of yours, put an APPLE in the cauldron."
   - ingredients: 010000000700000009000000
     resultObjectPrefab: {fileID: 374151818356740834, guid: dd333e9f4fcd29d40851dd1094ce73ab, type: 3}
     category: 0
@@ -30,7 +31,7 @@ MonoBehaviour:
     questDescription: Potion coming up! Give it an APPLE, a PUMPKIN, and a bit of
       GARLIC, pronto!
   - ingredients: 030000000800000003000000
-    resultObjectPrefab: {fileID: 374151818356740834, guid: dd333e9f4fcd29d40851dd1094ce73ab, type: 3}
+    resultObjectPrefab: {fileID: 374151818356740834, guid: 435d8d307ce95d74f80b176381e4db3c, type: 3}
     category: 0
     image: {fileID: 21300000, guid: 73f79f5e4835e994ebbf0f47352acc89, type: 3}
     questDescription: Vegetable one! It's TOMATO, PEPPER, and... another TOMATO.
