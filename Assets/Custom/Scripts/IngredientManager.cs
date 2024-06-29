@@ -13,17 +13,6 @@ public class IngredientManager : MonoBehaviour
         spawnPoints = new List<SpawnPoint>(FindObjectsOfType<SpawnPoint>());
     }
 
-    // public void RespawnAllIngredients()
-    // {
-    //     foreach (var spawnPoint in spawnPoints)
-    //     {
-    //         if (spawnPoint.isUnlocked)
-    //         {
-    //             spawnPoint.SpawnIngredient();
-    //         }
-    //     }
-    // }
-
     public void RespawnIngredient(Ingredient.Name ingredientName)
     {
         foreach (var spawnPoint in spawnPoints)
@@ -34,18 +23,6 @@ public class IngredientManager : MonoBehaviour
             }
         }
     }
-
-    // public void UnlockIngredient(Ingredient.Name ingredientName)
-    // {
-    //     foreach (var spawnPoint in spawnPoints)
-    //     {
-    //         if (spawnPoint.ingredientName == ingredientName)
-    //         {
-    //             spawnPoint.isUnlocked = true;
-    //             spawnPoint.SpawnIngredient();
-    //         }
-    //     }
-    // }
 
     public void SpawnByCategory(Recipe.Category category)
     {

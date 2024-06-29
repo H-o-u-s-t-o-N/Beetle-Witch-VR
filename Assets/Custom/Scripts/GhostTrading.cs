@@ -32,7 +32,7 @@ public class GhostTrading : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Ingredient ingredient = other.GetComponent<Ingredient>();
+        var ingredient = other.GetComponent<Ingredient>();
         if (ingredient != null)
         {
             if (CheckTrade(ingredient))
@@ -72,9 +72,9 @@ public class GhostTrading : MonoBehaviour
             return false;
         }
 
-        Ingredient.Name fromRecipe = recipe.ingredients[0];
+        var fromRecipeName = recipe.ingredients[0];
 
-        if (fromRecipe == ingredient.name)
+        if (fromRecipeName == ingredient.name)
         {
             return true;
         }

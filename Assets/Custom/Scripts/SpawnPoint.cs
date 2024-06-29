@@ -7,16 +7,8 @@ public class SpawnPoint : MonoBehaviour
     public Ingredient.Name ingredientName;
     public Ingredient prefab;
 
-    // private bool isUnlocked;
     private Ingredient currentIngredient;
 
-    // private void Start()
-    // {
-    //     if (isUnlocked)
-    //     {
-    //         SpawnIngredient();
-    //     }
-    // }
     public void Lock()
     {
         DestroyIngredient();
@@ -58,15 +50,4 @@ public class SpawnPoint : MonoBehaviour
         }
     }
 
-    // private GameObject GetIngredientPrefab(Ingredient.Name ingredientName)
-    // {
-    //     foreach (var recipe in recipeDatabase.recipes)
-    //     {
-    //         if (recipe.resultObjectPrefab.GetComponent<Ingredient>().name == ingredientName)
-    //         {
-    //             return recipe.resultObjectPrefab;
-    //         }
-    //     }
-    //     return null;
-    // }
 }
