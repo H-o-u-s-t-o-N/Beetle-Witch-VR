@@ -40,8 +40,7 @@ public class QuestManager : MonoBehaviour
 
     public void EndGame()
     {
-        StartCoroutine(wait());
-        SceneManager.LoadScene(2);
+        StartCoroutine(waitAndLoadCredits());
     }
 
     void GenerateQuests()
@@ -98,10 +97,11 @@ public class QuestManager : MonoBehaviour
     {
         debugSpawnPoint.SpawnIngredient(currentQuestRecipe.resultObjectPrefab);
     }
-        
-    private IEnumerator wait()
+
+    private IEnumerator waitAndLoadCredits()
     {
         yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(2);
     }
 
 
