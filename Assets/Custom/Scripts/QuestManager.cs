@@ -1,19 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuestManager : MonoBehaviour
 {
     public RecipeDatabase recipeDatabase;
-    public QuestCardManager questCardManager;
-    public GameObjectSpawnPoint spawnPoint;
+    public GameObjectSpawnPoint debugSpawnPoint;
 
+    private IngredientManager ingredientManager;
+    private QuestCardManager questCardManager;
     private Queue<Recipe> questQueue = new Queue<Recipe>();
     private int currentQuestIndex = 0;
     private Recipe currentQuestRecipe;
 
     void Start()
     {
+        this.ingredientManager = FindObjectOfType<IngredientManager>();
+
+        if (ingredientManager == null)
+        {
+            Debug.LogError("IngredientManager not found on the scene");
+        }
+
+        this.questCardManager = FindObjectOfType<QuestCardManager>();
+
+        if (ingredientManager == null)
+        {
+            Debug.LogError("QuestCardManager not found on the scene");
+        }
+
         GenerateQuests();
     }
 
@@ -22,19 +38,23 @@ public class QuestManager : MonoBehaviour
         StartNextQuest();
     }
 
+    public void EndGame()
+    {
+        StartCoroutine(wait());
+        SceneManager.LoadScene(2);
+    }
+
     void GenerateQuests()
     {
-        // TODO uncomment
-        List<Recipe> firstRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.First);
-        List<Recipe> secondRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Second);
-        // List<Recipe> finalRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Final);
-        // List<Recipe> tradingRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Trading);
-        // List<Recipe> testRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Test);
+        var startRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Start);
+        var firstRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.First);
+        var secondRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Second);
+        var finalRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Final);
 
-        AddRandomRecipesToQueue(firstRecipes, 3);
-        AddRandomRecipesToQueue(secondRecipes, 3);
-        // AddRandomRecipesToQueue(testRecipes, 1);
-        // AddRandomRecipesToQueue(tradingRecipes, 1);
+        AddRandomRecipesToQueue(startRecipes, 1);
+        AddRandomRecipesToQueue(firstRecipes, 7);
+        AddRandomRecipesToQueue(secondRecipes, 7);
+        AddRandomRecipesToQueue(finalRecipes, 7);
     }
 
     void AddRandomRecipesToQueue(List<Recipe> recipes, int count)
@@ -53,29 +73,36 @@ public class QuestManager : MonoBehaviour
         {
             this.currentQuestRecipe = questQueue.Dequeue();
 
+            ingredientManager.SpawnByCategory(currentQuestRecipe.category);
+
             questCardManager.CreateActiveQuestCard(currentQuestRecipe);
             currentQuestIndex++;
         }
         else
         {
-            Debug.Log("End game");
+            EndGame();
         }
     }
 
     public void OnQuestCompleted()
     {
-        SpawnDrink();
         StartNextQuest();
     }
 
-    public Drink GetExpectedDrink()
+    public Drink.Name GetExpectedDrinkName()
     {
-        return this.currentQuestRecipe.GetDrink();
+        return this.currentQuestRecipe.GetDrink().name;
     }
 
     public void SpawnDrink()
     {
-        spawnPoint.SpawnIngredient(currentQuestRecipe.resultObjectPrefab);
+        debugSpawnPoint.SpawnIngredient(currentQuestRecipe.resultObjectPrefab);
     }
+        
+    private IEnumerator wait()
+    {
+        yield return new WaitForSeconds(3);
+    }
+
 
 }

@@ -6,8 +6,10 @@ using UnityEngine;
 public class GhostTrading : MonoBehaviour
 {
     public RecipeDatabase recipeDatabase;
-    private GameObjectSpawnPoint spawnPoint;
 
+    [SerializeField] private AudioClip soundYes;
+    [SerializeField] private AudioClip soundNo;
+    private GameObjectSpawnPoint spawnPoint;
     private List<Recipe> tradingList;
     private GameObject noInfo;
     private GameObject yesInfo;
@@ -32,20 +34,23 @@ public class GhostTrading : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Ingredient ingredient = other.GetComponent<Ingredient>();
+        var ingredient = other.GetComponent<Ingredient>();
         if (ingredient != null)
         {
             if (CheckTrade(ingredient))
             {
+                SoundFXManager.instance.PlayClip(soundYes, transform, 0.5f);
                 StartCoroutine(showInfo(yesInfo));
             }
             else
             {
+                SoundFXManager.instance.PlayClip(soundNo, transform, 0.5f);
                 StartCoroutine(showInfo(noInfo));
             }
         }
         else
         {
+            SoundFXManager.instance.PlayClip(soundNo, transform, 0.5f);
             StartCoroutine(showInfo(noInfo));
         }
 
@@ -72,16 +77,16 @@ public class GhostTrading : MonoBehaviour
             return false;
         }
 
-        Ingredient.Name fromRecipe = recipe.ingredients[0];
+        var fromRecipeName = recipe.ingredients[0];
 
-        if (fromRecipe == ingredient.name)
+        if (fromRecipeName == ingredient.name)
         {
             return true;
         }
         else return false;
     }
 
-    IEnumerator showInfo(GameObject info)
+    private IEnumerator showInfo(GameObject info)
     {
         info.SetActive(true);
         yield return new WaitForSeconds(2);

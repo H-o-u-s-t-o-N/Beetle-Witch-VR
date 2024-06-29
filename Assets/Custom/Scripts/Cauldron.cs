@@ -5,15 +5,31 @@ using UnityEngine;
 public class Cauldron : MonoBehaviour
 {
     public int maxIngredientsCount = 5;
-    public IngredientManager ingredientManager;
     public RecipeDatabase recipeDatabase;
     public ParticleSystem particle;
+    public GameObjectSpawnPoint drinkSpawnPoint;
 
+    [SerializeField] private AudioClip[] soundsIn;
+
+    private IngredientManager ingredientManager;
+    private List<Recipe> recipes;
     private List<Ingredient.Name> currentIngredients = new List<Ingredient.Name>();
+
+    void Start()
+    {
+        this.ingredientManager = FindObjectOfType<IngredientManager>();
+
+        if (ingredientManager == null)
+        {
+            Debug.LogError("IngredientManager not found on the scene");
+        }
+
+        this.recipes = recipeDatabase.GetCauldronRecipes();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        Ingredient ingredient = other.GetComponent<Ingredient>();
+        var ingredient = other.GetComponent<Ingredient>();
         if (ingredient != null)
         {
             currentIngredients.Add(ingredient.name);
@@ -21,11 +37,13 @@ public class Cauldron : MonoBehaviour
             Destroy(other.gameObject);
             CheckIngredients();
 
-            StartCoroutine(RespawnIngredientsAfterFrame());
+            SoundFXManager.instance.PlayRandomClip(soundsIn, transform, 1f);
+
+            StartCoroutine(RespawnIngredientsAfterFrame(ingredient.name));
         }
         else
         {
-            Rigidbody rb = other.GetComponent<Rigidbody>();
+            var rb = other.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.AddForce(-other.transform.forward * 1, ForceMode.Impulse);
@@ -35,12 +53,11 @@ public class Cauldron : MonoBehaviour
 
     private void CheckIngredients()
     {
-        foreach (var recipe in recipeDatabase.recipes)
+        foreach (var recipe in recipes)
         {
             if (IsRecipeCorrect(recipe))
             {
-                // CreateResultObject(recipe.resultObjectPrefab); for test
-                UnlockNewIngredients(recipe.resultObjectPrefab.GetComponent<Ingredient>().name);
+                drinkSpawnPoint.SpawnIngredient(recipe.resultObjectPrefab);
                 currentIngredients.Clear();
                 return;
             }
@@ -54,18 +71,30 @@ public class Cauldron : MonoBehaviour
 
     private bool IsRecipeCorrect(Recipe recipe)
     {
+
         if (currentIngredients.Count != recipe.ingredients.Count)
         {
             return false;
         }
 
-        var tempIngredients = new List<Ingredient.Name>(currentIngredients);
+        var ingredientCounts = new Dictionary<Ingredient.Name, int>();
+        foreach (var ingredient in currentIngredients)
+        {
+            if (ingredientCounts.ContainsKey(ingredient))
+            {
+                ingredientCounts[ingredient]++;
+            }
+            else
+            {
+                ingredientCounts[ingredient] = 1;
+            }
+        }
 
         foreach (var ingredient in recipe.ingredients)
         {
-            if (tempIngredients.Contains(ingredient))
+            if (ingredientCounts.ContainsKey(ingredient) && ingredientCounts[ingredient] > 0)
             {
-                tempIngredients.Remove(ingredient);
+                ingredientCounts[ingredient]--;
             }
             else
             {
@@ -73,24 +102,13 @@ public class Cauldron : MonoBehaviour
             }
         }
 
-        return tempIngredients.Count == 0;
+        return true;
     }
 
-    private void CreateResultObject(GameObject resultObjectPrefab)
-    {
-        Instantiate(resultObjectPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
-        currentIngredients.Clear();
-    }
-
-    private void UnlockNewIngredients(Ingredient.Name newIngredient)
-    {
-        ingredientManager.UnlockIngredient(newIngredient);
-    }
-
-    private IEnumerator RespawnIngredientsAfterFrame()
+    private IEnumerator RespawnIngredientsAfterFrame(Ingredient.Name name)
     {
         yield return new WaitForEndOfFrame();
-        ingredientManager.RespawnAllIngredients();
+        ingredientManager.RespawnIngredient(name);
     }
 
     //--------- Prticle Effects

@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6fc790995cbd616409700b74b3d6271b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.102229975
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6fc790995cbd616409700b74b3d6271b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.102229975
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6fc790995cbd616409700b74b3d6271b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.102229975
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6fc790995cbd616409700b74b3d6271b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -100,7 +100,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5773444989484322734}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 93fd3ce14e8045645a179db0bfce7ea9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

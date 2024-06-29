@@ -23,7 +23,7 @@ public class Recipe
 
     public Drink GetDrink()
     {
-        Drink drink = resultObjectPrefab.GetComponent<Drink>();
+        var drink = resultObjectPrefab.GetComponent<Drink>();
         
         if(drink == null) {
             Debug.Log("resultObjectPrefab is invalid and don't has 'Drink' Script.");
