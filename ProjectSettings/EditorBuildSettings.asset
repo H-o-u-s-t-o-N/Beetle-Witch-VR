@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Custom/Scenes/MainMenu.unity
     guid: 2548c1275868d554b955025b765a50e9
   - enabled: 1
-    path: Assets/Custom/Scenes/Level.unity
+    path: Assets/Custom/Scenes/level.unity
     guid: 801422c2b378d4d41b136f680a3c76a7
   - enabled: 1
     path: Assets/Custom/Scenes/CreditsScene.unity

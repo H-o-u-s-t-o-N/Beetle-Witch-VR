@@ -24,6 +24,6 @@ public class GameObjectSpawnPoint : MonoBehaviour
             rb.AddForce(transform.up * 2.5f, ForceMode.Impulse);
         }
 
-        SoundFXManager.instance.PlayClip(soundSpawn, transform, 0.5f);
+        SoundFXManager.instance.PlayClip(soundSpawn, transform, 1f);
     }
 }
