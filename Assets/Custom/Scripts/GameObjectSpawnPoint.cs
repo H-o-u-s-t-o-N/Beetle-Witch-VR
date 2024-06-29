@@ -21,9 +21,9 @@ public class GameObjectSpawnPoint : MonoBehaviour
         var rb = spawned.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.AddForce(transform.up * 3, ForceMode.Impulse);
+            rb.AddForce(transform.up * 2.5f, ForceMode.Impulse);
         }
 
-        SoundFXManager.instance.PlayClip(soundSpawn, transform, 1f);
+        SoundFXManager.instance.PlayClip(soundSpawn, transform, 0.5f);
     }
 }

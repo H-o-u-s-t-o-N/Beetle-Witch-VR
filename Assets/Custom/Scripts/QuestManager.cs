@@ -40,7 +40,7 @@ public class QuestManager : MonoBehaviour
 
     public void EndGame()
     {
-        Debug.Log("End game");
+        StartCoroutine(wait());
         SceneManager.LoadScene(2);
     }
 
@@ -98,5 +98,11 @@ public class QuestManager : MonoBehaviour
     {
         debugSpawnPoint.SpawnIngredient(currentQuestRecipe.resultObjectPrefab);
     }
+        
+    private IEnumerator wait()
+    {
+        yield return new WaitForSeconds(3);
+    }
+
 
 }

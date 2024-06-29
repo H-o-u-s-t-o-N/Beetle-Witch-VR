@@ -39,18 +39,18 @@ public class GhostTrading : MonoBehaviour
         {
             if (CheckTrade(ingredient))
             {
-                SoundFXManager.instance.PlayClip(soundYes, transform, 1f);
+                SoundFXManager.instance.PlayClip(soundYes, transform, 0.5f);
                 StartCoroutine(showInfo(yesInfo));
             }
             else
             {
-                SoundFXManager.instance.PlayClip(soundNo, transform, 1f);
+                SoundFXManager.instance.PlayClip(soundNo, transform, 0.5f);
                 StartCoroutine(showInfo(noInfo));
             }
         }
         else
         {
-            SoundFXManager.instance.PlayClip(soundNo, transform, 1f);
+            SoundFXManager.instance.PlayClip(soundNo, transform, 0.5f);
             StartCoroutine(showInfo(noInfo));
         }
 

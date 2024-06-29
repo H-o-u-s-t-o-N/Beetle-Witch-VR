@@ -30,7 +30,7 @@ public class SpawnPoint : MonoBehaviour
                 var rb = spawned.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    rb.AddForce(transform.up * 1.5f, ForceMode.Impulse);
+                    rb.AddForce(transform.up * 1.2f, ForceMode.Impulse);
                 }
                 this.currentIngredient = spawned;
             }
