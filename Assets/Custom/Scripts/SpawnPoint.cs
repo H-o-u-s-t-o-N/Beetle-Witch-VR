@@ -45,7 +45,7 @@ public class SpawnPoint : MonoBehaviour
     {
         if (currentIngredient != null)
         {
-            Destroy(currentIngredient);
+            Destroy(currentIngredient.gameObject);
             currentIngredient = null;
         }
     }
