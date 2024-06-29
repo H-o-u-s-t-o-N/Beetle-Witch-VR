@@ -9,7 +9,7 @@ public class Cauldron : MonoBehaviour
     public ParticleSystem particle;
     public GameObjectSpawnPoint drinkSpawnPoint;
 
-    [SerializeField] private AudioClip soundIn;
+    [SerializeField] private AudioClip[] soundsIn;
 
     private IngredientManager ingredientManager;
     private List<Recipe> recipes;
@@ -37,7 +37,7 @@ public class Cauldron : MonoBehaviour
             Destroy(other.gameObject);
             CheckIngredients();
 
-            SoundFXManager.instance.PlayClip(soundIn, transform, 1f);
+            SoundFXManager.instance.PlayRandomClip(soundsIn, transform, 1f);
 
             StartCoroutine(RespawnIngredientsAfterFrame(ingredient.name));
         }

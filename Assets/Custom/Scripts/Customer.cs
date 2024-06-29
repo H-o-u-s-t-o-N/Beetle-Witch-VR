@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
+    [SerializeField] private AudioClip soundYes;
+    [SerializeField] private AudioClip soundNo;
     private QuestManager questManager;
     private GameObject noInfo;
     private GameObject yesInfo;
@@ -33,15 +35,18 @@ public class Customer : MonoBehaviour
             if (expected == drink.name)
             {
                 questManager.OnQuestCompleted();
+                SoundFXManager.instance.PlayClip(soundYes, transform, 1f);
                 StartCoroutine(showInfo(yesInfo));
             }
             else
             {
+                SoundFXManager.instance.PlayClip(soundYes, transform, 1f);
                 StartCoroutine(showInfo(noInfo));
             }
         }
         else
         {
+            SoundFXManager.instance.PlayClip(soundNo, transform, 1f);
             StartCoroutine(showInfo(noInfo));
         }
 

@@ -350,6 +350,7 @@ Transform:
   - {fileID: 5264472513235799189}
   - {fileID: 4942143546425629963}
   - {fileID: 3037996031825483146}
+  - {fileID: 7136910868689918664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7459833357483962049
@@ -365,7 +366,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipeDatabase: {fileID: 11400000, guid: 91af5e227fdc0744da70f0d254e3070c, type: 2}
-  spawnPoint: {fileID: 0}
+  soundYes: {fileID: 0}
+  soundNo: {fileID: 8300000, guid: f10e7ff812627164fa39911459400577, type: 3}
 --- !u!136 &3408309228408648716
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1016,6 +1018,76 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 1
+--- !u!1001 &1355740368621213276
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2171776855825077671}
+    m_Modifications:
+    - target: {fileID: 374151818356740834, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_Name
+      value: Apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.99999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.99999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5334589
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.246
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.87895495
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.3237894
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9461292
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+--- !u!4 &7136910868689918664 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8204406447206829204, guid: 8129ecfb42235bc4fb0925426a705f28, type: 3}
+  m_PrefabInstance: {fileID: 1355740368621213276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3960118806516376919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1233,3 +1305,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c405eac6a2a03a4b9a139dd4db18c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundSpawn: {fileID: 0}

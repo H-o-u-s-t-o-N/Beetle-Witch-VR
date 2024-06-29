@@ -52,9 +52,9 @@ public class QuestManager : MonoBehaviour
         var finalRecipes = recipeDatabase.recipes.FindAll(r => r.category == Recipe.Category.Final);
 
         AddRandomRecipesToQueue(startRecipes, 1);
-        AddRandomRecipesToQueue(firstRecipes, 3);
-        AddRandomRecipesToQueue(secondRecipes, 3);
-        AddRandomRecipesToQueue(finalRecipes, 3);
+        AddRandomRecipesToQueue(firstRecipes, 7);
+        AddRandomRecipesToQueue(secondRecipes, 7);
+        AddRandomRecipesToQueue(finalRecipes, 7);
     }
 
     void AddRandomRecipesToQueue(List<Recipe> recipes, int count)
